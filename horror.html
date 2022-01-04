@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        movie management
+    </title>
+    <meta charset="utf-8">
+    <link href="C:\Users\pasam_fyfm\OneDrive\Desktop\myproject\my.css" rel="stylesheet">
+    <script>
+
+        function getData() {
+            var data = JSON.parse(sessionStorage.getItem("data"));
+            var horrorTable = document.getElementById("horrorTbl");
+            data.forEach(function (item, index, array) {
+                if (item.Movieganre.toLowerCase() === 'horror') {
+                    var rowCount = horrorTable.rows.length;
+                    var row = horrorTable.insertRow(rowCount);
+
+                    row.insertCell(0).innerHTML = item.Moviename; //movie name
+                    row.insertCell(1).innerHTML = item.Moviecast; // movie cast
+                    row.insertCell(2).innerHTML = item.Rating;//Rating
+                    row.insertCell(3).innerHTML = item.Movieganre;//Movie genre
+                    row.insertCell(4).innerHTML = item.Description;//descrition
+
+
+
+                }
+            })
+        }
+
+    </script>
+</head>
+
+<body onload="getData()">
+    <nav>
+        <ul>
+            <a href="#genre">
+                <li>All movies</li>
+            </a>
+            <a href="#genre">
+                <li>Action</li>
+            </a>
+            <a href="#genre">
+                <li>Drama</li>
+            </a>
+            <a href="C:/Users/pasam_fyfm/OneDrive/Desktop/myproject/comedy.html">
+                <li>Comedy</li>
+            </a>
+            <a href="C:/Users/pasam_fyfm/OneDrive/Desktop/myproject/horror.html">
+                <li>Horror</li>
+            </a>
+        </ul>
+    </nav>
+
+    <table class="list" id="horrorTbl">
+        <thead>
+            <tr>
+                <th>MovieName</th>
+                <th>Movie Cast</th>
+                <th>Rating</th>
+                <th>Moviegenre</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>

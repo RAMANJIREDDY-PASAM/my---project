@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        movie management
+    </title>
+    <meta charset="utf-8">
+    <link href="C:\Users\pasam_fyfm\OneDrive\Desktop\myproject\my.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+           <a href="#genre"><li>All movies</li></a>
+            <a href="#genre"><li>Action</li></a>
+            <a href="#genre"><li>Drama</li></a>
+            <a href="C:/Users/pasam_fyfm/OneDrive/Desktop/myproject/comedy.html"><li>Comedy</li></a>
+            <a href="C:/Users/pasam_fyfm/OneDrive/Desktop/myproject/horror.html"><li>Horror</li></a>
+        </ul>
+    </nav>
+ <table>
+     <tr>
+         <td>
+             <form autocomplete="off" onsubmit="onFormSubmit()">
+                 <div>
+                     <label for="Moviename">Movie Name</label>
+                     <input name="MovieName" id="Moviename" type="text">
+                 </div>
+                 <div>
+                    <label for="Moviecast">Movie cast</label>
+                    <input name="MovieCast" id="Moviecast" type="text">
+                </div>
+                <div>
+                    <label for="Rating">Rating</label>
+                    <input name="Rating" id="Rating" type="number" min="3" max="10".value >
+                </div>
+                <div>
+                    <label for="Movieganre">Movie Ganre</label>
+                    <input name="MovieGanre" id="Movieganre" type="text">
+                </div>
+                <div>
+                    <label for="Description">Description</label>
+                    <input name="Description" id="Description" type="text">
+                </div>
+                <div class="form_action_button">
+                    <input type="submit" value="submit">
+                    <input type="reset" value="Delete">
+                </div>
+             </form>
+             <td>
+                 <table class="list" id="Movietable">
+                     <thead>
+                         <tr >
+                             <th>MovieName</th>
+                             <th>Movie Cast</th>
+                             <th>Rating</th>
+                             <th >Moviegenre</th>
+                             <th>Description</th>
+                         </tr>                   
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                 </table>
+             </td>
+         </td>
+     </tr> 
+    </table>
+<script src="script.js"></script>
+</body>
+</html>
